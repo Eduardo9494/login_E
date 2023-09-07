@@ -20,19 +20,24 @@
             base.Dispose(disposing);
         }
 
+        private Button GetCerrar2()
+        {
+            return Cerrar2;
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(Button cerrar2)
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             panel1 = new Panel();
             Cerrar2 = new Button();
-            user2 = new TextBox();
-            pass2 = new TextBox();
+            n_user = new TextBox();
+            n_pass = new TextBox();
             guardar = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -52,32 +57,33 @@
             // Cerrar2
             // 
             Cerrar2.FlatStyle = FlatStyle.Flat;
-            Cerrar2.Image = (Image)resources.GetObject("Cerrar2.Image");
+            cerrar2.Image = (Image)resources.GetObject("Cerrar2.Image");
             Cerrar2.Location = new Point(354, 3);
             Cerrar2.Name = "Cerrar2";
             Cerrar2.Size = new Size(29, 27);
             Cerrar2.TabIndex = 1;
             Cerrar2.UseVisualStyleBackColor = true;
+            Cerrar2.Click += Cerrar2_Click;
             // 
-            // user2
+            // n_user
             // 
-            user2.BorderStyle = BorderStyle.None;
-            user2.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            user2.Location = new Point(138, 101);
-            user2.Name = "user2";
-            user2.Size = new Size(211, 18);
-            user2.TabIndex = 3;
-            user2.TextAlign = HorizontalAlignment.Center;
+            n_user.BorderStyle = BorderStyle.None;
+            n_user.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            n_user.Location = new Point(138, 101);
+            n_user.Name = "n_user";
+            n_user.Size = new Size(211, 18);
+            n_user.TabIndex = 3;
+            n_user.TextAlign = HorizontalAlignment.Center;
             // 
-            // pass2
+            // n_pass
             // 
-            pass2.BorderStyle = BorderStyle.None;
-            pass2.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            pass2.Location = new Point(138, 176);
-            pass2.Name = "pass2";
-            pass2.Size = new Size(211, 18);
-            pass2.TabIndex = 4;
-            pass2.TextAlign = HorizontalAlignment.Center;
+            n_pass.BorderStyle = BorderStyle.None;
+            n_pass.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            n_pass.Location = new Point(138, 176);
+            n_pass.Name = "n_pass";
+            n_pass.Size = new Size(211, 18);
+            n_pass.TabIndex = 4;
+            n_pass.TextAlign = HorizontalAlignment.Center;
             // 
             // guardar
             // 
@@ -94,6 +100,7 @@
             guardar.TabIndex = 6;
             guardar.Text = "Guardar";
             guardar.UseVisualStyleBackColor = false;
+            guardar.Click += guardar_Click;
             // 
             // label1
             // 
@@ -124,8 +131,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(guardar);
-            Controls.Add(pass2);
-            Controls.Add(user2);
+            Controls.Add(n_pass);
+            Controls.Add(n_user);
             Controls.Add(panel1);
             Name = "Registro";
             Text = "Registro";
@@ -138,8 +145,8 @@
 
         private Panel panel1;
         private Button Cerrar2;
-        private TextBox user2;
-        private TextBox pass2;
+        private TextBox n_user;
+        private TextBox n_pass;
         private Button guardar;
         private Label label1;
         private Label label2;

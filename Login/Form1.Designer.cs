@@ -38,6 +38,8 @@
             entrar = new Button();
             label1 = new Label();
             button1 = new Button();
+            label2 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -81,9 +83,10 @@
             user.Name = "user";
             user.Size = new Size(211, 18);
             user.TabIndex = 2;
-            user.Text = "Ingrese Usuario";
             user.TextAlign = HorizontalAlignment.Center;
             user.TextChanged += textBox1_TextChanged;
+            user.Enter += user_Enter;
+            user.Leave += user_Leave;
             // 
             // pass
             // 
@@ -93,8 +96,9 @@
             pass.Name = "pass";
             pass.Size = new Size(211, 18);
             pass.TabIndex = 3;
-            pass.Text = "Ingrese contraseña";
             pass.TextAlign = HorizontalAlignment.Center;
+            pass.Enter += pass_Enter;
+            pass.Leave += pass_Leave;
             // 
             // muestra
             // 
@@ -106,6 +110,7 @@
             muestra.TabIndex = 4;
             muestra.Text = "Mostrar";
             muestra.UseVisualStyleBackColor = true;
+            muestra.CheckedChanged += muestra_CheckedChanged;
             // 
             // entrar
             // 
@@ -145,6 +150,30 @@
             button1.TabIndex = 7;
             button1.Text = "Registrar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(175, 300);
+            label2.Name = "label2";
+            label2.Size = new Size(100, 17);
+            label2.TabIndex = 8;
+            label2.Text = "Ingrese Usuario";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Yu Gothic UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(175, 366);
+            label3.Name = "label3";
+            label3.Size = new Size(119, 17);
+            label3.TabIndex = 9;
+            label3.Text = "Ingrese contraseña";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -152,6 +181,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
             ClientSize = new Size(457, 652);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(entrar);
@@ -161,6 +192,7 @@
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -179,5 +211,7 @@
         private Button entrar;
         private Label label1;
         private Button button1;
+        private Label label2;
+        private Label label3;
     }
 }
