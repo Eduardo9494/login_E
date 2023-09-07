@@ -57,7 +57,7 @@
             // Cerrar2
             // 
             Cerrar2.FlatStyle = FlatStyle.Flat;
-            cerrar2.Image = (Image)resources.GetObject("Cerrar2.Image");
+            cerrar2.Image = resources.GetObject("Cerrar2.Image") as Imag;
             Cerrar2.Location = new Point(354, 3);
             Cerrar2.Name = "Cerrar2";
             Cerrar2.Size = new Size(29, 27);
